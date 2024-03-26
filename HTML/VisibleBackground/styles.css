@@ -1,0 +1,39 @@
+body {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 10%;
+  text-align: start;
+}
+
+.btn p {
+  display: inline-block;
+}
+
+.btn a {
+  text-decoration: none;
+  margin: 20px;
+}
+
+i {
+  top: 45%; /* Adjust to move the icon vertically */
+  left: 40%; /* Start position of the icon */
+  animation: moveIcon 2s linear infinite /* Animation duration and timing */
+}
+
+@keyframes moveIcon {
+  0% {
+    left: 50%; /* Start position */
+  }
+  50% {
+    left: 52%; /* Midway position */
+  }
+  100% {
+    left: 53%; /* End position */
+  }
+}

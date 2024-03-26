@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram</title>
+    <link rel="stylesheet" href="Assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box-1">
+                <img src="./Images/Telegram.png" alt="TelegramPNG">
+            </div>
+    
+            <h1>Telegram</h1>   
+    
+            <p style="font-size: 13px; color: rgb(161, 161, 161); font-style: italic;">Please confirm your country code and enter your phone number</p>
+    
+            <fieldset style="margin-top: 40px;">
+                <legend>Country</legend>
+                <input list="country" name="country" value="Uzbekistan">
+                <datalist id="country">
+                    <option value="Uzbekistan">
+                    <option value="United Kingdom">
+                    <option value="United States">
+                    <option value="Russia">
+                </datalist>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Your phone number</legend>
+                <input type="phone" name="phone" value="+998">
+            </fieldset>
+    
+            <div class="box-2">
+                <!-- I Agree to the Terms of use -->
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="signed">
+                <label for="vehicle1">Keep me signed in</label><br>
+            </div>
+            
+            <p class="box-3"><a href="#">LOG IN BY QR CODE</a></p>
+        </div>
+    </div>
+</body>
+</html>

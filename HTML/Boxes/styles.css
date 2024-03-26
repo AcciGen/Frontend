@@ -1,0 +1,23 @@
+.box1 {
+    width: 160px;
+    height: 100px;
+    background-color: red;
+    border: 4px solid lime;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    width: 160px;
+    height: 100px;
+    background-color: blue;
+    border: 4px solid yellow;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

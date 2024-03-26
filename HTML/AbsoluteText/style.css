@@ -1,0 +1,36 @@
+p {
+    position: absolute;
+    font-size: 18px;
+    font-family: cursive;
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    background-repeat:  no-repeat;
+}
+
+.tl {
+    top: 0;
+    left: 0;
+}
+
+.tr {
+    top: 0;
+    right: 0;
+}
+
+.bl {
+    bottom: 0;
+    left: 0;
+}
+
+.br {
+    bottom: 0;
+    right: 0;
+}
+
+.c {
+    top: 50%;
+    left: 50%;
+}

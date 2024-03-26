@@ -1,0 +1,36 @@
+.Box3{
+    position:relative;
+    width:240px;
+    height:470px;
+    background: #b37d7b;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.Box1{
+    position:absolute;
+    top:25px;
+    left:20px;
+    background:#9bbd5c;
+    border: 1px solid;
+    width:200px;
+    height:180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box2{
+    position:absolute;
+    background:#041b7b;
+    border: 1px solid;
+    top:230px;
+    left:20px;
+    width:200px;
+    height:180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,27 @@
+table {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.tr1 td h1{
+    margin: 0;
+    background-color: khaki;
+    color: red;
+    text-align: center;
+}
+
+.tr2 td {
+    padding-left: 10px;
+    font-size: 15px;
+    background-color:rgb(98, 173, 248);
+}
+
+.btns {
+    text-align: center;
+    background-color: rgb(98, 173, 248);
+}
+
+.btns td input{
+    width: 120px;
+    height: 30px;
+}

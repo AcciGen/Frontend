@@ -1,0 +1,71 @@
+.container {
+    margin: 0 auto;
+    height: 100hv;
+}
+
+.homeIllustrator {
+    width: 100%;
+    padding: 30px;
+    height: 562px;
+    background-color: rgb(255, 255, 243);
+}
+
+.homeIllustrator div {
+    margin-top: 120px;
+    margin-left: 60px;
+    width: 45%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.homeIllustrator button {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 58px;
+    padding: 15px 20px;
+    background-color: black;
+    color: rgb(255, 255, 243);
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.1s ease;
+    margin: 42px 0px 0px 64px;
+    overflow: hidden;
+}
+
+.homeIllustrator button:hover {
+    animation: color-change 1.6s infinite alternate;
+}
+
+.icon {
+    margin-left: 5px;
+}
+
+.homeIllustrator button:hover .icon {
+    animation: move-arrow 1.6s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: black;
+    color: rgb(255, 255, 243);
+  }
+  100% {
+    background-color: rgb(255, 255, 243);
+    color: black;
+  }
+}
+
+@keyframes move-arrow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(160%);
+    }
+}

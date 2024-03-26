@@ -1,0 +1,30 @@
+table {
+    text-align: center;
+    width: 60%;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #333;
+}
+
+.t1 {
+    height: 50px;
+}
+
+.t2 {
+    height: 150px;
+}
+.t3 {
+    height: 150px;
+}
+
+.t4 {
+    height: 50px;
+}

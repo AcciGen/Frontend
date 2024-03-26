@@ -1,0 +1,26 @@
+.container {
+    background-color: rgb(33, 33, 33);
+    margin: 10px;
+}
+
+.link-1 a {
+    margin-top: 4px;
+    text-decoration: none;
+    color: rgb(170, 0, 0);
+}
+
+.link a {
+    margin-top: 14px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: rgb(170, 0, 0);
+}
+
+.telegram {
+    position: fixed;
+    top: 86%;
+    left: 94%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}

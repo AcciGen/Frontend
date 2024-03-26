@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Assets/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="signup">
+            Sign Up
+        </div>
+        <div class="box-2">
+            <div class="box-2-1">
+                <!-- First Name -->
+                <label class="label" for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br>
+                <!-- Last Name -->
+                <label class="lab" for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br>
+                <!-- Date Of Birth -->
+                <label class="lab" for="birthday">Date Of Birth</label>
+                <input type="date" id="birthday" name="birthday"><br>
+                <!-- Gender -->
+                <label class="lab" for="gender">Gender</label>
+                <input type="radio" id="male" name="fav_language" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="fav_language" value="Female">
+                <label for="female">Female</label><br>
+                <!-- Country -->
+                <label class="lab" for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="country">Country</option>
+                    <option value="uzb">Uzbekistan</option>
+                    <option value="rus">Russian</option>
+                    <option value="uk">United Kingdom</option>
+                </select><br>
+                <!-- E-mail -->
+                <label class="lab" for="e-mail">E-mail</label>
+                <input type="email" id="e-mail" name="e-mail" placeholder="Enter E-mail"><br>
+                <!-- Phone -->
+                <label class="lab" for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Phone"><br>
+                <!-- Password -->
+                <label class="lab" for="pwd">Password</label>
+                <input type="password" id="pwd" name="pwd"><br>
+                <!-- Confirm Password -->
+                <label class="lab" for="cpwd">Confirm Password</label>
+                <input type="password" id="cpwd" name="cpwd"><br>      
+            </div>
+            <div class="box-2-2">
+                <!-- I Agree to the Terms of use -->
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="iAgree">
+                <label for="vehicle1">I Agree to the Terms of use</label><br>
+            </div>
+
+        </div>
+        <div class="actions">
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="submit">
+            <!-- Cencel -->
+            <input type="submit" value="Cancel" class="cancel">
+        </div>
+    </div>
+</body>
+</html>
