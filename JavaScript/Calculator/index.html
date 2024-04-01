@@ -4,65 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
-    
-<div>
-    <input type="text" id="num1">
-    <select id="operation">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-        <option value="//">//</option>
-        <option value="%">%</option>
-    </select>
-    <input type="text" id="num2">
+    <div class="calculator">
+        <input type="text" class="display" disabled>
+        <div class="buttons">
+          <button class="operator">C</button>
+          <button class="operator">±</button>
+          <button class="operator">%</button>
+          <button class="operator">√</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="operator">÷</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="operator">×</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="operator">-</button>
+          <button>0</button>
+          <button>.</button>
+          <button class="operator">+</button>
+          <button class="operator">=</button>
+        </div>
+      </div>
+      <script src="scripts.js"></script>
 
-    <button onclick="calculate()">Calculate</button>
-
-    <div id="result"></div>
-</div>
-
-    <script>
-        function calculate() {
-        var num1 = parseFloat(document.getElementById('num1').value);
-        var num2 = parseFloat(document.getElementById('num2').value);
-        var operation = document.getElementById('operation').value;
-        var result = document.getElementById('result');
-        var res;
-
-        switch (operation) {
-            case '+':
-                res = num1 + num2;
-                break;
-            case '-':
-                res = num1 - num2;
-                break;
-            case '*':
-                res = num1 * num2;
-                break;
-            case '/':
-                if (num2 !== 0) {
-                    res = num1 / num2;
-                } else {
-                    result.innerHTML = "Cannot divide by zero";
-                    return;
-                }
-                break;
-            case '//':
-                res = parseInt(num1 / num2);
-                break;
-            case '%':
-                res = num1 % num2;
-                break;
-            default:
-                result.innerHTML = "Invalid operation";
-                return;
-        }
-
-        result.innerHTML = res;
-    }
-    </script>
 </body>
 </html>
