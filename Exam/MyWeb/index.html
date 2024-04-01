@@ -10,15 +10,15 @@
 <body style="font-family: 'Arial', 'Source Sans 3'; font-weight: 400px;">
     
     <main>
-        <div class="home">
+        <div class="home" id="Home">
             <header class="pai">
               <ul>
                 <li><img src="assets/images/P.ai.svg" alt="P.ai"></li>
-                <li><a href="#" style="margin-right: 12px;">Product</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="#Demo" style="margin-right: 12px;">Product</a></li>
+                <li><a href="#Customers">Customers</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="https://www.figma.com/signup?locale=en">Login</a></li>
               </ul>
             </header>
             <p class="home-text-1a">Generate unlimited,</p>
@@ -28,7 +28,7 @@
             <p class="home-text-3b">advertising channels. No effort or delay &</p>
             <p class="home-text-3c">complementary to Customer Data Platforms.</p>
         </div>
-        <div class="sponsors">
+        <div class="sponsors" id="Customers">
             <p class="sponsors-text-1">Chosen by progressive marketers.</p>
             <ul class="sponsors-icos">
                 <li><img src="assets/images/asos.svg" alt="ASOS"></li>
@@ -36,9 +36,9 @@
                 <li><img src="assets/images/mindfulChef.svg" alt="MindfulChef"></li>
                 <li><img src="assets/images/thg.svg" alt="THG"></li>
             </ul>
-            <p class="sponsors-text-2">Read success stories</p>
+            <button class="sponsors-btn">Read success stories</button>
         </div>
-        <div class="prediction">
+        <div class="prediction" id="About">
             <div>
                 <p class="prediction-text-1">Predict every customer’s future.</p>
                 <p class="prediction-text-2">Accurately predict short and long-term customer outcomes 
@@ -110,7 +110,7 @@
                 <img style="position: absolute; left: 989px; margin-top: -134px; width: 60px; height: 74px;" src="assets/images/plus.svg" alt="plus">
             </div>
         </div>
-        <div class="comment">
+        <div class="comment" id="Blog">
             <img src="assets/images/singleQuote.svg" alt="Quote" style="position: absolute; margin: 282px 0px 0px 180px;">
             <div class="comment-info">
                 <img src="assets/images/treatwell.svg" alt="treatwell">
@@ -121,9 +121,9 @@
                 <p style="margin-top: -10px; font-size: 18px;">Director of Growth, Treatwell</p>
             </div>
         </div>
-        <div class="demo">
+        <div class="demo" id="Demo">
             <p class="demo-text">We’d love to give you a demo.</p>
-            <button class="demo-btn">Book a demo</button>
+            <button class="demo-btn" onclick="redirectToYouTube()">Book a demo</button>
         </div>
         <a href="https://t.me/Den_Rov">
             <img src="assets/images/Telegram.png" class="telegram" alt="ItsMe">
@@ -156,3 +156,9 @@
 
 </body>
 </html>
+
+<script>
+    function redirectToYouTube() {
+      window.location.href = 'https://www.figma.com/pricing/';
+    }
+</script>

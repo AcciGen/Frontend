@@ -138,15 +138,17 @@
     margin-right: 122px;
 }
 
-.sponsors-text-2 {
+.sponsors-btn {
     display: inline-block;
     align-items: center;
     overflow-wrap: break-word;
     font-size: 18px;
     width: 300px;
     height: 50px;
-    margin: 30px 0px 0px 680px;
+    margin: 30px 0px 0px 612px;
     color: white;
+    background-color: transparent;
+    border: none;
 }
 
 .prediction {
