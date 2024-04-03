@@ -21,66 +21,57 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         return response.json();
     })
     .then(data => {
-        var accessToken = data.accessToken;
+        fetch('https://api.sardorsohinazarov.uz/api/Devices/GetAll', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + data.accessToken
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Displaying devices as a list
+            var deviceList = document.getElementById('device-list');
+            deviceList.innerHTML = '<h3>List of Devices:</h3>';
+            var table = document.createElement('table');
+            var thead = document.createElement('thead');
+            var tbody = document.createElement('tbody');
 
-        function fetchDataAndPopulateTable() {
-            fetch('https://api.sardorsohinazarov.uz/api/Devices/GetAll', {
-                method: 'GET',
-                headers: {
-                    'Authorization': 'Bearer ' + accessToken
-                }
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                populateTable(data);
-            })
-            .catch(error => {
-                console.error('Fetch request failed:', error);
+            // Creating table header
+            var headerRow = document.createElement('tr');
+            var headers = ['ID', 'Full Name', 'Phone Number', 'Car Number']; // Add carNumber here
+            headers.forEach(headerText => {
+                var th = document.createElement('th');
+                th.textContent = headerText;
+                headerRow.appendChild(th);
             });
-        }
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
 
-        function populateTable(data) {
-            var tableBody = document.getElementById('data-table-body');
-            tableBody.innerHTML = '';
-
-            data.forEach(item => {
-                var row = tableBody.insertRow();
-                row.insertCell().textContent = item.id;
-                row.insertCell().textContent = item.name;
-                row.insertCell().textContent = item.description;
-
-                var updateButton = document.createElement('button');
-                updateButton.textContent = 'Update';
-                updateButton.addEventListener('click', function() {
-                    updateItem(item.id);
+            // Creating table body
+            data.forEach(device => {
+                var tr = document.createElement('tr');
+                var values = [device.id, device.fullName, device.phoneNumber, device.carNumber]; // Add carNumber here
+                values.forEach(value => {
+                    var td = document.createElement('td');
+                    td.textContent = value;
+                    tr.appendChild(td);
                 });
-                row.insertCell().appendChild(updateButton);
-
-                var deleteButton = document.createElement('button');
-                deleteButton.textContent = 'Delete';
-                deleteButton.addEventListener('click', function() {
-                    deleteItem(item.id);
-                });
-                row.insertCell().appendChild(deleteButton);
+                tbody.appendChild(tr);
             });
-        }
+            table.appendChild(tbody);
 
-        function updateItem(itemId) {
-            console.log('Updating item with ID:', itemId);
-        }
+            deviceList.appendChild(table);
+            alert('Login successful!');
+        })
+        .catch(error => {
+            console.error('Fetch request failed:', error);
+        });
 
-        function deleteItem(itemId) {
-            console.log('Deleting item with ID:', itemId);
-        }
-
-        fetchDataAndPopulateTable();
-
-        alert('Login successful!');
     })
     .catch(error => {
         console.error('Fetch request failed:', error);
